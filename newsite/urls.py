@@ -10,7 +10,10 @@ urlpatterns = [
     path("delete-recipe/<int:id>/" , delete_recipe , name="delete_recipe"),
     path('update-recipe/<int:id>/', update_recipe, name='update_recipe'),
     path('recipe/', recipe_view, name='recipe_view'),
+    path('login/',login_page,name='login_page'),
+    path('register/',register_page,name='register_page'),
     path("admin/", admin.site.urls),
+    path('logout/' ,logout_page , name='logout_page' )
 ]
 
 if settings.DEBUG:
